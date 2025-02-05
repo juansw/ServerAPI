@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "builds": [
     {
       "src": "api/express.js",
@@ -8,8 +7,9 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)", 
       "dest": "/api/express.js"
     }
   ]
 }
+

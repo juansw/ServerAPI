@@ -32,4 +32,7 @@ app.post('/data', (req, res) => {
 });
 
 // Export the app as a handler for Vercel
-export default app;
+//export default app;
+export default function handler(req, res) {
+  res.json({ message: "Hello from Vercel!" });
+}

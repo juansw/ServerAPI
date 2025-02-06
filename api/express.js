@@ -14,6 +14,13 @@ app.get('/', (req, res) => {
 
 app.post('/data', (req, res) => {
     try {
+        const apiResponse = await fetch("https://apim.workato.com/api_ferco/searchi-v1/search");
+        const data = await apiResponse.json();
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ error: "Error fetching data" });
+  }
+    /*try {
         const apiResponse = await fetch('https://apim.workato.com/api_ferco/searchi-v1/search', {
             method: 'POST',
             headers: {
@@ -28,7 +35,7 @@ app.post('/data', (req, res) => {
     } catch (error) {
         console.error('Error in proxy:', error);
         res.status(500).send('Error fetching the API');
-    }
+    }*/
 });
 
 // Export the app as a handler for Vercel

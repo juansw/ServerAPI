@@ -41,7 +41,8 @@ app.post('/api/proxy/data', async (req, res) => {
                 'Content-Type': 'application/json',
                 'api-token': '94700300d77ce83c0806ec2e9cec6d16f24522b9a49bf4e9638d7efcc1e39710'
             },
-            body: JSON.stringify(req.body),
+            //body: JSON.stringify(req.body),
+            body: JSON.stringify(payload),
         });
 
         const data = await apiResponse.text(); // o .json() si la respuesta es JSON

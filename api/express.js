@@ -33,7 +33,7 @@ const app = express();
 app.use(express.json());
 
 // Endpoint proxy
-app.post('/data', async (req, res) => {
+app.post('/api/proxy/data', async (req, res) => {
     try {
         const apiResponse = await fetch('https://apim.workato.com/api_ferco/searchi-v1/search', {
             method: 'POST',

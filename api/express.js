@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.json({ message: "¡Hola desde Express en Vercel! 🚀" });
 });
 
-app.post('/data', (req, res) => {  // Usamos funciones síncronas aquí
+app.post('/data', (req, res) => {
   fetch("https://apim.workato.com/api_ferco/searchi-v1/search")
     .then(response => response.json())
     .then(data => res.json(data))

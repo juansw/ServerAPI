@@ -2,7 +2,8 @@
   "version": 2,
   "routes": [
     { "src": "/data", "dest": "/api/proxy/data" },
-    { "src": "/(.*)", "dest": "/api/express.js" }
+    { "src": "/(.*)", "dest": "/api/express.js" },
+    { "src": "/", "dest": "/public/index.html" }
   ]
 }
 
